@@ -91,34 +91,36 @@ export const FooterSection = (): JSX.Element => {
           {companies.map((company, index) => (
             <Card
               key={index}
-              className="flex-shrink-0 w-[385px] bg-white rounded-[32px] border-0"
+              className="flex-shrink-0 w-[385px] bg-white rounded-[32px] border-0 cursor-pointer group hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 ease-out hover:scale-[1.02]"
             >
               <CardContent className="p-4 flex flex-col gap-6">
-                <img
-                  className="w-full h-[235px] rounded-3xl object-cover"
-                  alt="Male working with"
-                  src="https://empirenepal.com/public/images/2038228916supervisors.jpeg"
-                />
+                <div className="overflow-hidden rounded-3xl">
+                  <img
+                    className="w-full h-[235px] object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    alt="Male working with"
+                    src="https://empirenepal.com/public/images/2038228916supervisors.jpeg"
+                  />
+                </div>
 
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-col gap-2">
-                    <h3 className="font-heading-h3-bold-24-130 font-[number:var(--heading-h3-bold-24-130-font-weight)] text-colortext-text-primary text-[length:var(--heading-h3-bold-24-130-font-size)] tracking-[var(--heading-h3-bold-24-130-letter-spacing)] leading-[var(--heading-h3-bold-24-130-line-height)] [font-style:var(--heading-h3-bold-24-130-font-style)]">
+                    <h3 className="font-heading-h3-bold-24-130 font-[number:var(--heading-h3-bold-24-130-font-weight)] text-colortext-text-primary text-[length:var(--heading-h3-bold-24-130-font-size)] tracking-[var(--heading-h3-bold-24-130-letter-spacing)] leading-[var(--heading-h3-bold-24-130-line-height)] [font-style:var(--heading-h3-bold-24-130-font-style)] group-hover:text-red-600 transition-colors duration-300">
                       {company.name}
                     </h3>
 
-                    <p className="[font-family:'Proxima_Nova-Regular',Helvetica] font-normal text-colortext-text-tertiary text-base tracking-[0] leading-[20.8px]">
+                    <p className="[font-family:'Proxima_Nova-Regular',Helvetica] font-normal text-colortext-text-tertiary text-base tracking-[0] leading-[20.8px] group-hover:text-gray-600 transition-colors duration-300">
                       {company.description}
                     </p>
                   </div>
 
                   <Button
                     variant="ghost"
-                    className="h-auto justify-start gap-2 px-0 py-1 text-colorbrand-brand-primary hover:bg-transparent"
+                    className="h-auto justify-start gap-2 px-0 py-1 text-colorbrand-brand-primary hover:bg-transparent group-hover:gap-4 transition-all duration-300"
                   >
-                    <span className="[font-family:'Proxima_Nova-Regular',Helvetica] font-normal text-base tracking-[0] leading-[20.8px]">
+                    <span className="[font-family:'Proxima_Nova-Regular',Helvetica] font-normal text-base tracking-[0] leading-[20.8px] group-hover:font-medium transition-all duration-300">
                       Explore More
                     </span>
-                    <ArrowRightIcon className="w-4 h-4" />
+                    <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-2 group-hover:text-red-600 transition-all duration-300" />
                   </Button>
                 </div>
               </CardContent>
